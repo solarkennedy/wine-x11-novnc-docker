@@ -5,6 +5,9 @@ Not a very good name, is it.
 Ever wanted to containerize your wine applications and access them via
 a web browser? No? Neither did I!
 
+This is a [trusted build](https://registry.hub.docker.com/u/solarkennedy/wine-x11-novnc-docker/)
+on the Docker Hub.
+
 ## Run It
 
     docker run -p 8080:8080 solarkennedy/wine-x11-novnc-docker
