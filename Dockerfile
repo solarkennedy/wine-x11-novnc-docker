@@ -15,7 +15,7 @@ ENV LANGUAGE en_US.UTF-8
  usermod -d /config nobody && \
  chown -R nobody:users /home
 
-RUN apt-get update &&  apt-get -y install xvfb x11vnc xdotool wget supervisor fluxbox
+RUN apt-get update &&  apt-get -y install xvfb x11vnc xdotool wget supervisor
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ENV WINEPREFIX /root/prefix32
