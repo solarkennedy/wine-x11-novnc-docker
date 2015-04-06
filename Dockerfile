@@ -1,5 +1,5 @@
-FROM monokrome/wine
-MAINTAINER Kyle Anderson <kyle@xkyle.com>
+FROM phusion/baseimage:0.9.16
+MAINTAINER archedraft
 
 RUN apt-get update &&  apt-get -y install xvfb x11vnc xdotool wget supervisor fluxbox
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
