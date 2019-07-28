@@ -7,7 +7,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 RUN dpkg --add-architecture i386
-RUN apt-get update && apt-get -y install xvfb x11vnc xdotool wget tar supervisor wine32-development net-tools fluxbox git
+RUN apt-get update && apt-get -y install xvfb x11vnc xdotool wget tar supervisor wine32-development net-tools fluxbox
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ENV WINEPREFIX /root/prefix32
