@@ -15,7 +15,7 @@ ENV WINEARCH win32
 ENV DISPLAY :0
 
 WORKDIR /root/
-RUN git clone --depth 1 https://github.com/novnc/noVNC.git /root/novnc/ && rm -fr /root/novnc/.git
+RUN wget -O - https://github.com/novnc/noVNC/archive/v1.1.0.tar.gz | tar -xzv -C /root/ && mv /root/noVNC-1.1.0 /root/novnc
 
 EXPOSE 8080
 
