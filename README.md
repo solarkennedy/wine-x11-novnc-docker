@@ -18,7 +18,7 @@ on the Docker Hub.
 
 ## Run It
 
-    docker run -p 8080:8080 solarkennedy/wine-x11-novnc-docker
+    docker run --rm -p 8080:8080 solarkennedy/wine-x11-novnc-docker
     xdg-open http://localhost:8080
 
 In your web browser you should see the default application, explorer.exe:
