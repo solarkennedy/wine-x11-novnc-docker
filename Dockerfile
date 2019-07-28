@@ -7,7 +7,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 RUN dpkg --add-architecture i386
-RUN apt-get update && apt-get -y install xvfb x11vnc xdotool wget supervisor wine32-development net-tools fluxbox
+RUN apt-get update && apt-get -y install xvfb x11vnc xdotool wget supervisor wine32-development net-tools fluxbox git
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ENV WINEPREFIX /root/prefix32
@@ -15,7 +15,7 @@ ENV WINEARCH win32
 ENV DISPLAY :0
 
 WORKDIR /root/
-ADD novnc /root/novnc/
+RUN git clone --depth 1 https://github.com/novnc/noVNC.git /root/novnc/ && rm -fr /root/novnc/.git
 
 EXPOSE 8080
 
