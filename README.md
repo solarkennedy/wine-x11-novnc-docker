@@ -1,5 +1,8 @@
 ## wine-x11-novnc-docker
 
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/solarkennedy/wine-x11-novnc-docker/latest)
+![Docker Pulls](https://img.shields.io/docker/pulls/solarkennedy/wine-x11-novnc-docker)
+
 Not a very good name, is it?
 
 Ever wanted to containerize your wine applications and access them via
